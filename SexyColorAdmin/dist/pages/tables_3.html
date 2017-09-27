@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<!-- Meta, title, CSS, favicons, etc. -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Admin</title>
+		<!--公共样式-->
+		    <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress 网页进度条 http://amazeui.org/1.x/javascript/nprogress/-->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+		<!-- iCheck 选框-->
+		<link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+		<link href="../vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+		<link href="../vendors/sweetalert/sweetalert.css" rel="stylesheet" />
+		<!--公共样式2-->
+		 <!-- Custom Theme Style -->
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+    <!--自定义扩展样式-->
+    <link href="../build/css/custom-extend.css" rel="stylesheet">
+
+	</head>
+
+	<body class="nav-md">
+		<div class="container body">
+			<div class="main_container">
+
+				<!--left_col-->
+				<div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>色月管理系统</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="images/user.png" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>欢迎,</span>
+                <h2>Admin</h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>常规</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-home"></i> 主页 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="index.html">总览</a></li>
+                      <!--<li><a href="index2.html">Dashboard2</a></li>
+                      <li><a href="index3.html">Dashboard3</a></li>-->
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-edit"></i> 表单 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="form.html">基本表单</a></li>
+                      <li><a href="form_validation.html">表单验证</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-table"></i> 表格 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                       <li><a href="tables_3.html">基本表格1</a></li>
+                      <li><a href="tables.html">基本表格2</a></li>
+                      <li><a href="tables_dynamic.html">动态表格</a></li>
+                      <li><a href="tables_dynamic_2.html">动态表格高级</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="设置">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="全屏">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="锁住">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="注销" href="login.html">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+				<!--/left_col-->
+
+				<!--top-nav-->
+				 <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="images/user.png" alt="">Admin
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="javascript:;"> 个人中心</a></li>
+                    <li>
+                      <a href="javascript:;">
+                        <span class="badge bg-red pull-right">50%</span>
+                        <span>设置</span>
+                      </a>
+                    </li>
+                    <li><a href="javascript:;">帮助</a></li>
+                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i>注销</a></li>
+                  </ul>
+                </li>
+
+                <li role="presentation" class="dropdown">
+                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="badge bg-green">6</span>
+                  </a>
+                  <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/user.png" alt="Profile Image" /></span>
+                        <span>
+                          <span>Admin</span>
+                          <span class="time">3分钟前</span>
+                        </span>
+                        <span class="message">
+                          你有新的消息通知请及时处理...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/user.png" alt="Profile Image" /></span>
+                        <span>
+                          <span>Admin</span>
+                          <span class="time">3分钟前</span>
+                        </span>
+                        <span class="message">
+                          你有新的消息通知请及时处理...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/user.png" alt="Profile Image" /></span>
+                        <span>
+                          <span>Admin</span>
+                          <span class="time">3分钟前</span>
+                        </span>
+                        <span class="message">
+                          你有新的消息通知请及时处理...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/user.png" alt="Profile Image" /></span>
+                        <span>
+                          <span>Admin</span>
+                          <span class="time">3分钟前</span>
+                        </span>
+                        <span class="message">
+                          你有新的消息通知请及时处理...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="text-center">
+                        <a>
+                          <strong>查看更多</strong>
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+				<!--/top-nav-->
+
+				<!-- page content -->
+				<div class="right_col" role="main">
+					<div class="">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<div class="x_panel">
+									<div class="x_title">
+										<ol class="breadcrumb">
+											<li>
+												<a href="#">会员管理</a>
+											</li>
+											<li>
+												<a href="#">列表</a>
+											</li>
+											<li class="active">详情</li>
+										</ol>
+										<div class="clearfix"></div>
+									</div>
+
+									<div class="x_content">
+										<div class="table-responsive">
+
+											<form class="form-horizontal form_fixed">
+												<!---->
+												<div class="row">
+													<div class="form-group">
+														<label class="control-label">用户名称</label>
+														<div class="input_box">
+															<input type="text" class="form-control" placeholder="姓名、昵称">
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="control-label">用户邮箱</label>
+														<div class="input_box">
+															<input type="text" class="form-control" placeholder="Email">
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="control-label">注册时间</label>
+														<div class="input_box range_box">
+															<div class="input_box_2">
+																<div class="input-group date" id="datetimepicker1">
+																	<input type="text" class="form-control" placeholder="开始时间">
+																	<div class="input-group-addon">
+																		<i class="glyphicon glyphicon-calendar"></i>
+																	</div>
+																</div>
+															</div>
+															<div class="_separator">
+																-
+															</div>
+															<div class="input_box_2">
+																<div class="input-group date" id="datetimepicker2">
+																	<input type="text" class="form-control" placeholder="结束时间">
+																	<div class="input-group-addon">
+																		<i class="glyphicon glyphicon-calendar"></i>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="form-group">
+														<label class="control-label">用户角色</label>
+														<div class="input_box">
+															<select class="form-control">
+																<option>超级管理员</option>
+																<option>1</option>
+																<option>2</option>
+																<option>3</option>
+																<option>4</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="control-label">用户状态</label>
+														<div class="input_box">
+															<select class="form-control">
+																<option>选择</option>
+																<option>1</option>
+																<option>2</option>
+																<option>3</option>
+																<option>4</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="control-label">用户等级</label>
+														<div class="input_box short_box">
+															<input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" class="form-control" id="exampleInputAmount" placeholder="数字">
+															<div class="_separator">
+																-
+															</div>
+															<input type="text" class="form-control" id="exampleInputAmount" placeholder="数字" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+														</div>
+
+													</div>
+												</div>
+
+												<div class="row">
+													<div class="form-group">
+														<label class="control-label">是否管制</label>
+														<div class="input_box">
+															<select class="form-control">
+																<option>选择</option>
+																<option>1</option>
+																<option>2</option>
+																<option>3</option>
+																<option>4</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="control-label">是否封禁</label>
+														<div class="input_box">
+															<select class="form-control">
+																<option>选择</option>
+																<option>1</option>
+																<option>2</option>
+																<option>3</option>
+																<option>4</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label class="control-label"></label>
+														<div class="input_box">
+															<button type="submit" class="btn btn-success _submit">
+                            <i class="fa fa-search"></i>
+                            搜 索
+                          </button>
+														</div>
+													</div>
+
+												</div>
+
+												<div class="clearfix"></div>
+											</form>
+
+											<div class="x_content text-right">
+												<button type="button" class="btn btn-default">封禁</button>
+
+												<button type="button" class="btn btn-primary">取消封禁</button>
+
+												<button type="button" class="btn btn-success">添加</button>
+
+												<button type="button" class="btn btn-info">激活</button>
+
+												<button type="button" class="btn btn-warning">取消</button>
+
+												<button type="button" class="btn btn-danger">删除</button>
+
+												<button type="button" class="btn btn-dark">其它</button>
+
+											</div>
+
+											<form id="jsTableForm" class="table_form">
+												<table class="table table-striped jambo_table bulk_action">
+													<thead>
+														<tr class="headings">
+															<th>
+																<input type="checkbox" class="allCheck flat">
+															</th>
+															<th class="column-title">用户名</th>
+															<th class="column-title">用户昵称</th>
+															<th class="column-title">订单 </th>
+															<th class="column-title">账单姓名</th>
+															<th class="column-title">状态 </th>
+															<th class="column-title">总额 </th>
+															<th class="column-title no-link last">
+																<span class="nobr">操作</span>
+															</th>
+														</tr>
+													</thead>
+
+													<tbody>
+														<tr>
+
+														</tr>
+														<tr class="pointer">
+															<td>
+																<label>
+                              <input type="checkbox" class="flat">
+                            </label>
+															</td>
+															<td class=" ">121000039</td>
+															<td class="td_user">
+																<p>红色高跟鞋</p>
+																<p>
+																	<i title="超级管理员" class="glyphicon glyphicon-user"></i>
+																	<i class="glyphicon glyphicon-user text-success"></i>
+																	<i class="glyphicon glyphicon-user text-warning"></i>
+																	<i class="glyphicon glyphicon-user text-primary"></i>
+																	<i class="glyphicon glyphicon-user text-danger"></i>
+																</p>
+																<p>
+																	<i class="fa fa-warning"></i>
+																	<i class="fa fa-bolt"></i>
+																	<i class="fa fa-eye-slash"></i>
+																	<i class="fa fa-warning active"></i>
+																	<i class="fa fa-bolt active"></i>
+																	<i class="fa fa-eye-slash active"></i>
+																</p>
+															</td>
+															<td class=" ">121000208 <i class="success fa fa-long-arrow-up"></i>
+															</td>
+															<td class=" ">John Blank L</td>
+															<td class=" ">Paid</td>
+															<td class="a-right a-right ">$741.20</td>
+															<td class=" last">
+																<button type="button" class="btn show btn-xs btn-info" data-toggle="modal" data-backdrop="static" data-target="#jsModal1">小弹框</button>
+																<button type="button" class="btn show btn-xs btn-danger" data-toggle="modal" data-backdrop="static" data-target="#jsModal2">中弹框</button>
+																<button type="button" class="btn show btn-xs btn-success" data-toggle="modal" data-backdrop="static" data-target="#jsModal3">大弹框</button>
+																<button id="notify" type="button" class="btn btn-default show btn-xs">提示框</button>
+															</td>
+														</tr>
+														<tr class="pointer">
+															<td>
+																<label>
+                              <input type="checkbox" class="flat">
+                            </label>
+															</td>
+															<td class=" ">121000039</td>
+															<td class=" ">May 23, 2014 11:30:12 PM</td>
+															<td class=" ">121000208 <i class="success fa fa-long-arrow-up"></i>
+															</td>
+															<td class=" ">John Blank L</td>
+															<td class=" ">Paid</td>
+															<td class="a-right a-right ">$741.20</td>
+															<td class=" last">
+																<a href="#">View</a>
+															</td>
+														</tr>
+														<tr class="pointer">
+															<td>
+																<label>
+                              <input type="checkbox" class="flat">
+                            </label>
+															</td>
+															<td class=" ">121000039</td>
+															<td class=" ">May 23, 2014 11:30:12 PM</td>
+															<td class=" ">121000208 <i class="success fa fa-long-arrow-up"></i>
+															</td>
+															<td class=" ">John Blank L</td>
+															<td class=" ">Paid</td>
+															<td class="a-right a-right ">$741.20</td>
+															<td class=" last">
+																<a href="#">View</a>
+															</td>
+														</tr>
+														<tr class="pointer">
+															<td>
+																<label>
+                              <input type="checkbox" class="flat">
+                            </label>
+															</td>
+															<td class=" ">121000039</td>
+															<td class=" ">May 23, 2014 11:30:12 PM</td>
+															<td class=" ">121000208 <i class="success fa fa-long-arrow-up"></i>
+															</td>
+															<td class=" ">John Blank L</td>
+															<td class=" ">Paid</td>
+															<td class="a-right a-right ">$741.20</td>
+															<td class=" last">
+																<a href="#">View</a>
+															</td>
+														</tr>
+														<tr class="pointer">
+															<td>
+																<label>
+                              <input type="checkbox" class="flat">
+                            </label>
+															</td>
+															<td class=" ">121000039</td>
+															<td class=" ">May 23, 2014 11:30:12 PM</td>
+															<td class=" ">121000208 <i class="success fa fa-long-arrow-up"></i>
+															</td>
+															<td class=" ">John Blank L</td>
+															<td class=" ">Paid</td>
+															<td class="a-right a-right ">$741.20</td>
+															<td class=" last">
+																<a href="#">View</a>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<div>
+													<div class="info_box">
+														<span>1</span>-<span>10</span>&nbsp;共&nbsp;<span>1375</span>&nbsp;条
+													</div>
+
+													<ul class="pagination">
+														<li class="disabled">
+															<a href="#" aria-label="Previous"><span aria-hidden="true"><</span></a>
+														</li>
+														<li class="active">
+															<a href="#">1 <span class="sr-only">(current)</span></a>
+														</li>
+														<li>
+															<a href="#">2</a>
+														</li>
+														<li>
+															<a href="#">3</a>
+														</li>
+														<li>
+															<a href="#">4</a>
+														</li>
+														<li>
+															<a href="#">5</a>
+														</li>
+														<li>
+															<a href="#" aria-label="Next"><span aria-hidden="true">></span></a>
+														</li>
+													</ul>
+													<div class="clearfix"></div>
+												</div>
+
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--小modal-->
+				<div class="modal fade" id="jsModal1" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+					<div class="modal-dialog modal-sm" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="exampleModalLabel">我是小弹框</h4>
+							</div>
+							<div class="modal-body">
+								<form class="form-horizontal">
+									<div class="form-group">
+										<label for="inputEmail3" class="col-xs-3 control-label">Email</label>
+										<div class="col-xs-6">
+											<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="inputEmail3" class="col-xs-3 control-label">Email</label>
+										<div class="col-xs-6">
+											<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="inputEmail3" class="col-xs-3 control-label">Email</label>
+										<div class="col-xs-6">
+											<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" id="jsBtnOk" class="btn btn-primary">确定</button>
+								<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--中modal-->
+				<div class="modal fade" id="jsModal2" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+					<div class="modal-dialog modal-md" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="exampleModalLabel">我是一个小标题</h4>
+							</div>
+							<div class="modal-body">
+								<form class="form-horizontal">
+									<div class="form-group">
+										<label for="inputEmail3" class="col-xs-3 control-label">Email</label>
+										<div class="col-xs-6">
+											<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="inputEmail3" class="col-xs-3 control-label">Email</label>
+										<div class="col-xs-6">
+											<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="inputEmail3" class="col-xs-3 control-label">Email</label>
+										<div class="col-xs-6">
+											<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary">确定</button>
+								<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--大modal-->
+				<div class="modal fade" id="jsModal3" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="exampleModalLabel">我是大弹框</h4>
+							</div>
+							<div class="modal-body">
+								<form class="form-horizontal">
+									<div class="form-group">
+										<label for="inputEmail3" class="col-xs-3 control-label">Email</label>
+										<div class="col-xs-6">
+											<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="inputEmail3" class="col-xs-3 control-label">Email</label>
+										<div class="col-xs-6">
+											<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="inputEmail3" class="col-xs-3 control-label">Email</label>
+										<div class="col-xs-6">
+											<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-primary">确定</button>
+								<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- /page content -->
+
+				<!-- footer content -->
+				 <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            Bootstrap Admin Template by <a href="https://colorlib.com">XXXXX</a>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+				<!-- /footer content -->
+
+			</div>
+		</div>
+		<!--公共js-->
+		 <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+
+		<!-- iCheck -->
+		<style type="text/css">
+			.pnotify {}
+		</style>
+		<script src="../vendors/iCheck/icheck.min.js"></script>
+		<script type="text/javascript" src="../vendors/moment/min/moment-with-locales.min.js"></script>
+		<script type="text/javascript" src="../vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js"></script>
+		<script src="../vendors/sweetalert/sweetalert.min.js"></script>
+		<!--公共js2-->
+		<!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.js"></script>
+
+		<script>
+			$(function() {
+
+				/*日期选择器*/
+				var dateTimePicker = function() {
+					var picker1 = $('#datetimepicker1').datetimepicker({
+						format: 'YYYY-MM-DD',
+						locale: moment.locale('zh-cn'),
+						maxDate: moment().add(1, 'days').format("YYYY-MM-DD")
+					});
+
+					var picker2 = $('#datetimepicker2').datetimepicker({
+						format: 'YYYY-MM-DD',
+						locale: moment.locale('zh-cn'),
+						maxDate: moment().add(1, 'days').format("YYYY-MM-DD")
+					});
+
+					//动态设置最小值  
+					picker1.on('dp.change', function(e) {
+						//picker2.data('DateTimePicker').minDate(e.date);
+					});
+					//动态设置最大值  
+					picker2.on('dp.change', function(e) {
+						//picker1.data('DateTimePicker').maxDate(e.date);
+					});
+				}
+
+				/*消息提示框 调用*/
+				var executeNotify = function() {
+					$('#notify').click(function() {
+						swal({
+							title: '操作成功！',
+							//text: '操作成功！',
+							timer: 1500,
+							showConfirmButton: false,
+							type: 'success'
+						});
+						console.log('notify execute!');
+					});
+
+				}
+
+				/*弹出框 Modal*/
+				var modal = function() {
+					var modal = $('#jsModal1');
+					modal.find('#jsBtnOk').click(function() {
+						modal.modal('hide');
+						swal({
+							title: '操作成功！',
+							//							text: '操作成功！',
+							timer: 1500,
+							showConfirmButton: false,
+							type: 'success'
+						});
+					});
+					//弹框关闭的时候触发
+					modal.on('hidden.bs.modal', function(e) {
+
+					})
+				}
+
+				/*简单全选*/
+				var allCheck = function() {
+						$('.jambo_table').on('ifChanged', '.allCheck', function() {
+							var $input = $(this).parents('table').find('.flat:not(.allCheck)');
+							this.checked ? $input.iCheck('check') : $input.iCheck('uncheck');
+						});
+					}
+
+					/*表格提交多选*/
+
+					//init
+					! function() {
+						dateTimePicker(); //日期选择器
+						executeNotify(); //提示框
+						modal(); //弹框
+						allCheck(); //全选
+					}();
+
+			});
+
+			/*
+			 * 全选、单选
+			 * var isExecuteEvent = true;
+			$('.jambo_table').on('ifChanged', '.flat', function() {
+				if(!isExecuteEvent) return false;
+				var $tableCheck = $(this).parents('.jambo_table').find('.flat');
+				if($(this).hasClass('allCheck')) {
+					isExecuteEvent = false;
+					$tableCheck.iCheck('check');
+					isExecuteEvent = true;
+				} else {
+					//非选中
+					if(!this.checked) {
+						isExecuteEvent = false;
+						$tableCheck.iCheck('uncheck');
+						isExecuteEvent = true;
+					} else {
+						//选中
+						var length1 = $tableCheck.length,
+							length2 = $tableCheck.filter(':checked').length;
+						if(length1 == length2) {
+							isExecuteEvent = false;
+							$tableCheck.find('.allCheck').iCheck('check');
+							isExecuteEvent = true;
+						}
+
+					}
+				}
+
+				function check() {
+					$tableCheck.each(function(index, element) {
+						$(element).iCheck('uncheck');
+						if(index == $tableCheck.length) {
+							isExecuteEvent = true;
+						}
+					});
+				}
+			});*/
+		</script>
+
+	</body>
+
+</html>

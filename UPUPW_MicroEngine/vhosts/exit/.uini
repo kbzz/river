@@ -1,0 +1,1 @@
+open_basedir="G:\phpStudy\WWW\UPUPW_MicroEngine\vhosts\exit\;G:\phpStudy\WWW\UPUPW_MicroEngine\memcached\;G:\phpStudy\WWW\UPUPW_MicroEngine\phpmyadmin\;G:\phpStudy\WWW\UPUPW_MicroEngine\temp\;C:\Windows\Temp\"

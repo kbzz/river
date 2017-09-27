@@ -1,0 +1,22 @@
+{
+  "name": "cls",
+  "version": "1.0.0",
+  "description": ">SexyColor Admin Template ——伍冠源 2017-3-2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.coding.net:Mr_Five/SexyColor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^1.0.0",
+    "gulp-ruby-sass": "^2.1.1"
+  }
+}

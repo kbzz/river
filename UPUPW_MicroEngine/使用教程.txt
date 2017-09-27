@@ -1,0 +1,30 @@
+……………………………………………………………………………………………………………………………………………………
+UPUPW定制版MicroEngine微信公众平台使用说明:
+……………………………………………………………………………………………………………………………………………………
+
+三步教程： 
+1、解压UPUPW_MicroEngine文件夹到任意不含空格的非中文路径下
+2、打开UPUPW面板输入s1回车
+3、打开浏览器输入127.0.0.1即可访问htdocs目录下的微擎网站。
+
+以上三句话不能解决问题请看具体教程:http://php.upupw.net/customize/20/5650.html
+
+备注：
+1、运行前请确保电脑上已安装.NET Framework 2.0或3.5支持库
+2、服务器部署请先把域名解析到服务器IP，然后外网可以通过域名访问微擎
+
+
+
+更多说明文档请访问：
+http://www.upupw.net/nginxhelp/
+UPUPW 绿色服务器平台官网：http://www.upupw.net
+UPUPW 官方交流论坛：http://php.upupw.net
+UPUPW 友情赞助：http://www.upupw.net/Friendly/
+UPUPW官方邮箱：webmaster@upupw.net
+UPUPW微博：http://weibo.com/upupw
+UPUPW PHP1群：246550622 (已满)
+UPUPW PHP2群：309864708 (已满)
+UPUPW PHP3群：223448605 (已满)
+UPUPW PHP4群：468570808 
+UPUPW VIP赞助交流群：132457792（友情赞助后可凭支付宝账号验证通过）
+UPUPW SVIP企业客服群：107166943（赞助500以上可凭支付宝账号验证通过）

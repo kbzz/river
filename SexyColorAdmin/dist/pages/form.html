@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Admin</title>
+    <!--公共样式-->
+        <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress 网页进度条 http://amazeui.org/1.x/javascript/nprogress/-->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+   
+    <!-- iCheck 选框-->
+    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+	<!-- bootstrap-wysiwyg -->
+    <link href="../vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+    <!-- Select2 -->
+    <link href="../vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+    <!-- Switchery -->
+    <link href="../vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- starrr -->
+    <link href="../vendors/starrr/dist/starrr.css" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+   
+
+     <!--公共样式2-->
+     <!-- Custom Theme Style -->
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+    <!--自定义扩展样式-->
+    <link href="../build/css/custom-extend.css" rel="stylesheet">
+
+   
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        
+        <!--left_col-->
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>色月管理系统</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="images/user.png" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>欢迎,</span>
+                <h2>Admin</h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>常规</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-home"></i> 主页 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="index.html">总览</a></li>
+                      <!--<li><a href="index2.html">Dashboard2</a></li>
+                      <li><a href="index3.html">Dashboard3</a></li>-->
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-edit"></i> 表单 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="form.html">基本表单</a></li>
+                      <li><a href="form_validation.html">表单验证</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-table"></i> 表格 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                       <li><a href="tables_3.html">基本表格1</a></li>
+                      <li><a href="tables.html">基本表格2</a></li>
+                      <li><a href="tables_dynamic.html">动态表格</a></li>
+                      <li><a href="tables_dynamic_2.html">动态表格高级</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="设置">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="全屏">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="锁住">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="注销" href="login.html">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+        <!--/left_col-->
+        
+        <!--top-nav-->
+          <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="images/user.png" alt="">Admin
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="javascript:;"> 个人中心</a></li>
+                    <li>
+                      <a href="javascript:;">
+                        <span class="badge bg-red pull-right">50%</span>
+                        <span>设置</span>
+                      </a>
+                    </li>
+                    <li><a href="javascript:;">帮助</a></li>
+                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i>注销</a></li>
+                  </ul>
+                </li>
+
+                <li role="presentation" class="dropdown">
+                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="badge bg-green">6</span>
+                  </a>
+                  <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/user.png" alt="Profile Image" /></span>
+                        <span>
+                          <span>Admin</span>
+                          <span class="time">3分钟前</span>
+                        </span>
+                        <span class="message">
+                          你有新的消息通知请及时处理...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/user.png" alt="Profile Image" /></span>
+                        <span>
+                          <span>Admin</span>
+                          <span class="time">3分钟前</span>
+                        </span>
+                        <span class="message">
+                          你有新的消息通知请及时处理...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/user.png" alt="Profile Image" /></span>
+                        <span>
+                          <span>Admin</span>
+                          <span class="time">3分钟前</span>
+                        </span>
+                        <span class="message">
+                          你有新的消息通知请及时处理...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/user.png" alt="Profile Image" /></span>
+                        <span>
+                          <span>Admin</span>
+                          <span class="time">3分钟前</span>
+                        </span>
+                        <span class="message">
+                          你有新的消息通知请及时处理...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="text-center">
+                        <a>
+                          <strong>查看更多</strong>
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+        <!--/top-nav-->
+				
+         <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>表单元素</h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="请输入搜索关键字">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>表单设计<small>副标题</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">设置1</a>
+                          </li>
+                          <li><a href="#">设置2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">姓 <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">名 <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">昵称</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">性别</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <div id="gender" class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                              <input type="radio" name="gender" value="male"> &nbsp;男 &nbsp;
+                            </label>
+                            <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                              <input type="radio" name="gender" value="female"> &nbsp;女 &nbsp;
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">生日 <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                        </div>
+                      </div>
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <button class="btn btn-primary" type="button">取消</button>
+						  <button class="btn btn-primary" type="reset">重置</button>
+                          <button type="submit" class="btn btn-success">提交</button>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>表单设计<small>副标题</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">设置1</a>
+                          </li>
+                          <li><a href="#">设置2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                    <form class="form-horizontal form-label-left input_mask">
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="性名">
+                        <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                      </div>
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <input type="text" class="form-control" id="inputSuccess3" placeholder="姓名">
+                        <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
+                      </div>
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="电子邮箱">
+                        <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
+                      </div>
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <input type="text" class="form-control" id="inputSuccess5" placeholder="电话">
+                        <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">默认输入框</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="text" class="form-control" placeholder="默认输入框">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">禁用输入框</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="text" class="form-control" disabled="disabled" placeholder="禁用输入框">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">只读输入框</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="text" class="form-control" readonly="readonly" placeholder="只读输入框">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">出生日期<span class="required">*</span>
+                        </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                        </div>
+                      </div>
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                          <button type="button" class="btn btn-primary">取消</button>
+						   <button class="btn btn-primary" type="reset">重置</button>
+                          <button type="submit" class="btn btn-success">提交</button>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>星级评定</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">设置1</a>
+                          </li>
+                          <li><a href="#">设置2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <h4>星级评定<small> 鼠标悬停或者单击在星星上</small></h4>
+                    <div>
+                      <div class="starrr stars"></div>
+                      	你给的评级是 
+                      <span class="stars-count">0</span> star(s)
+                    </div>
+
+                    <p>你也可以给一个默认的评级通过添加属性data-rating</p>
+                    <div class="starrr stars-existing" data-rating='4'></div>
+                    你给的评级是 <span class="stars-count-existing">4</span> star(s)
+                  </div>
+                </div>
+
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>注册表单<small>单击进行验证</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">设置1</a>
+                          </li>
+                          <li><a href="#">设置2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+
+                    <!-- start form for validation -->
+                    <form id="demo-form" data-parsley-validate>
+                      <label for="fullname">姓名* :</label>
+                      <input type="text" id="fullname" class="form-control" name="fullname" required />
+
+                      <label for="email">电子邮箱 * :</label>
+                      <input type="email" id="email" class="form-control" name="email" data-parsley-trigger="change" required />
+
+                      <label>性别 *:</label>
+                      <p>
+                        M:
+                        <input type="radio" class="flat" name="gender" id="genderM" value="M" checked="" required /> F:
+                        <input type="radio" class="flat" name="gender" id="genderF" value="F" />
+                      </p>
+
+                      <label>爱好 (至少2个):</label>
+                      <p style="padding: 5px;">
+                        <input type="checkbox" name="hobbies[]" id="hobby1" value="ski" data-parsley-mincheck="2" required class="flat" /> 滑雪
+                        <br />
+
+                        <input type="checkbox" name="hobbies[]" id="hobby2" value="run" class="flat" /> 跑步
+                        <br />
+
+                        <input type="checkbox" name="hobbies[]" id="hobby3" value="eat" class="flat" /> 美食
+                        <br />
+
+                        <input type="checkbox" name="hobbies[]" id="hobby4" value="sleep" class="flat" /> 睡觉
+                        <br />
+                        <p>
+
+                          <label for="heard">从哪里知道我们*:</label>
+                          <select id="heard" class="form-control" required>
+                            <option value="">选择..</option>
+                            <option value="press">出版社</option>
+                            <option value="net">网络</option>
+                            <option value="mouth">口头宣传</option>
+                          </select>
+
+                          <label for="message">消息 (至少20个字符, 最多100个字符) :</label>
+                          <textarea id="message" required="required" class="form-control" name="message" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" data-parsley-minlength-message="你至少需要输入20个字符的评论"
+                            data-parsley-validation-threshold="10"></textarea>
+
+                          <br/>
+                          <span class="btn btn-primary">验证表单</span>
+
+                    </form>
+                    <!-- end form for validations -->
+
+                  </div>
+                </div>
+
+
+              </div>
+
+              <div class="col-md-6 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>表单基本元素<small>副标题</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">设置1</a>
+                          </li>
+                          <li><a href="#">设置2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                    <form class="form-horizontal form-label-left">
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">默认输入框</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="text" class="form-control" placeholder="默认输入框">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">禁用输入框</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="text" class="form-control" disabled="disabled" placeholder="禁用输入框">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">只读输入框</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="text" class="form-control" readonly="readonly" placeholder="只读输入框">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">出生日期 <span class="required">*</span>
+                        </label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <textarea class="form-control" rows="3" placeholder='rows="3"'></textarea>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">密码</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="password" class="form-control" value="passwordonetwo">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">自动完成</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input type="text" name="country" id="autocomplete-custom-append" class="form-control col-md-10"/>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">下拉框</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <select class="form-control">
+                            <option>选择</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">自定义下拉框</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <select class="select2_single form-control" tabindex="-1">
+                            <option></option>
+                            <option>使用了select2插件</option>
+                            <option value="AK">Alaska</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="CA">California</option>
+                            <option value="NV">Nevada</option>
+                            <option value="OR">Oregon</option>
+                            <option value="WA">Washington</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="CO">Colorado</option>
+                            <option value="ID">Idaho</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="UT">Utah</option>
+                            <option value="WY">Wyoming</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TX">Texas</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">下拉框组</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <select class="select2_group form-control">
+                            <optgroup label="Alaskan/Hawaiian Time Zone">
+                              <option value="AK">Alaska</option>
+                              <option value="HI">Hawaii</option>
+                            </optgroup>
+                            <optgroup label="Pacific Time Zone">
+                              <option value="CA">California</option>
+                              <option value="NV">Nevada</option>
+                              <option value="OR">Oregon</option>
+                              <option value="WA">Washington</option>
+                            </optgroup>
+                            <optgroup label="Mountain Time Zone">
+                              <option value="AZ">Arizona</option>
+                              <option value="CO">Colorado</option>
+                              <option value="ID">Idaho</option>
+                              <option value="MT">Montana</option>
+                              <option value="NE">Nebraska</option>
+                              <option value="NM">New Mexico</option>
+                              <option value="ND">North Dakota</option>
+                              <option value="UT">Utah</option>
+                              <option value="WY">Wyoming</option>
+                            </optgroup>
+                            <optgroup label="Central Time Zone">
+                              <option value="AL">Alabama</option>
+                              <option value="AR">Arkansas</option>
+                              <option value="IL">Illinois</option>
+                              <option value="IA">Iowa</option>
+                              <option value="KS">Kansas</option>
+                              <option value="KY">Kentucky</option>
+                              <option value="LA">Louisiana</option>
+                              <option value="MN">Minnesota</option>
+                              <option value="MS">Mississippi</option>
+                              <option value="MO">Missouri</option>
+                              <option value="OK">Oklahoma</option>
+                              <option value="SD">South Dakota</option>
+                              <option value="TX">Texas</option>
+                              <option value="TN">Tennessee</option>
+                              <option value="WI">Wisconsin</option>
+                            </optgroup>
+                            <optgroup label="Eastern Time Zone">
+                              <option value="CT">Connecticut</option>
+                              <option value="DE">Delaware</option>
+                              <option value="FL">Florida</option>
+                              <option value="GA">Georgia</option>
+                              <option value="IN">Indiana</option>
+                              <option value="ME">Maine</option>
+                              <option value="MD">Maryland</option>
+                              <option value="MA">Massachusetts</option>
+                              <option value="MI">Michigan</option>
+                              <option value="NH">New Hampshire</option>
+                              <option value="NJ">New Jersey</option>
+                              <option value="NY">New York</option>
+                              <option value="NC">North Carolina</option>
+                              <option value="OH">Ohio</option>
+                              <option value="PA">Pennsylvania</option>
+                              <option value="RI">Rhode Island</option>
+                              <option value="SC">South Carolina</option>
+                              <option value="VT">Vermont</option>
+                              <option value="VA">Virginia</option>
+                              <option value="WV">West Virginia</option>
+                            </optgroup>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">下拉多选</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <select class="select2_multiple form-control" multiple="multiple">
+                            <option>Choose option</option>
+                            <option>Option one</option>
+                            <option>Option two</option>
+                            <option>Option three</option>
+                            <option>Option four</option>
+                            <option>Option five</option>
+                            <option>Option six</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="control-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">输入框标签</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <input id="tags_1" type="text" class="tags form-control" value="social, adverts, sales" />
+                          <div id="suggestions-container" style="position: relative; float: left; width: 250px; margin: 10px;"></div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-md-3 col-sm-3 col-xs-12 control-label">复选框和单选框
+                          <br>
+                          <small class="text-navy">基本Bootstrap元素</small>
+                        </label>
+
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value="">选择超过一个选项
+                            </label>
+                          </div>
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value="">选择超过一个选项
+                            </label>
+                          </div>
+                          <div class="radio">
+                            <label>
+                              <input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">只可以选择一个
+                            </label>
+                          </div>
+                          <div class="radio">
+                            <label>
+                              <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios">只可以选择一个
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="col-md-3 col-sm-3 col-xs-12 control-label">复选框和单选框
+                          <br>
+                          <small class="text-navy">基本Bootstrap元素</small>
+                        </label>
+
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" class="flat" checked="checked"> 选中
+                            </label>
+                          </div>
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" class="flat"> 未选中
+                            </label>
+                          </div>
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" class="flat" disabled="disabled"> 禁用
+                            </label>
+                          </div>
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" class="flat" disabled="disabled" checked="checked"> 禁用且选中
+                            </label>
+                          </div>
+                          <div class="radio">
+                            <label>
+                              <input type="radio" class="flat" checked name="iCheck"> 选中
+                            </label>
+                          </div>
+                          <div class="radio">
+                            <label>
+                              <input type="radio" class="flat" name="iCheck"> 未选中
+                            </label>
+                          </div>
+                          <div class="radio">
+                            <label>
+                              <input type="radio" class="flat" name="iCheck" disabled="disabled"> 禁用
+                            </label>
+                          </div>
+                          <div class="radio">
+                            <label>
+                              <input type="radio" class="flat" name="iCheck3" disabled="disabled" checked> 禁用且选中
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">开关</label>
+                        <div class="col-md-9 col-sm-9 col-xs-12">
+                          <div class="">
+                            <label>
+                              <input type="checkbox" class="js-switch" checked /> 选中
+                            </label>
+                          </div>
+                          <div class="">
+                            <label>
+                              <input type="checkbox" class="js-switch" /> 未选中
+                            </label>
+                          </div>
+                          <div class="">
+                            <label>
+                              <input type="checkbox" class="js-switch" disabled="disabled" /> 禁用
+                            </label>
+                          </div>
+                          <div class="">
+                            <label>
+                              <input type="checkbox" class="js-switch" disabled="disabled" checked="checked" /> 禁用且选中
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                          <button type="button" class="btn btn-primary">取消</button>
+                          <button type="reset" class="btn btn-primary">重置</button>
+                          <button type="submit" class="btn btn-success">提交</button>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>表单按钮<small>会话</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">设置1</a>
+                          </li>
+                          <li><a href="#">设置2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+
+                    <form class="form-horizontal form-label-left">
+
+                      <div class="form-group">
+                        <label class="col-sm-3 control-label">按钮附加</label>
+
+                        <div class="col-sm-9">
+                          <div class="input-group">
+                            <span class="input-group-btn">
+                                              <button type="button" class="btn btn-primary">搜索</button>
+                                          </span>
+                            <input type="text" class="form-control">
+                          </div>
+                          <div class="input-group">
+                            <input type="text" class="form-control">
+                            <span class="input-group-btn">
+                                              <button type="button" class="btn btn-primary">搜索</button>
+                                          </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="divider-dashed"></div>
+
+                      <div class="form-group">
+                        <label class="col-sm-3 control-label">按钮附加</label>
+
+                        <div class="col-sm-9">
+                          <div class="input-group">
+                            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                            <div class="input-group-btn">
+                              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">操作 <span class="caret"></span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                <li><a href="#">操作</a>
+                                </li>
+                                <li><a href="#">其它操作</a>
+                                </li>
+                                <li><a href="#">其它一些</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="#">分割连接</a>
+                                </li>
+                              </ul>
+                            </div>
+                            <!-- /btn-group -->
+                          </div>
+                          <div class="input-group">
+                            <input type="text" class="form-control">
+                            <span class="input-group-btn">
+                              <button type="button" class="btn btn-primary">搜索</button>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>文本区域<small>会话</small></h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">设置1</a>
+                        </li>
+                        <li><a href="#">设置2</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <div id="alerts"></div>
+                  <div class="btn-toolbar editor" data-role="editor-toolbar" data-target="#editor-one">
+                    <div class="btn-group">
+                      <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font"><i class="fa fa-font"></i><b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                      </ul>
+                    </div>
+
+                    <div class="btn-group">
+                      <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font Size"><i class="fa fa-text-height"></i>&nbsp;<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a data-edit="fontSize 5">
+                            <p style="font-size:17px">大号</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a data-edit="fontSize 3">
+                            <p style="font-size:14px">正常</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a data-edit="fontSize 1">
+                            <p style="font-size:11px">小号</p>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="btn-group">
+                      <a class="btn" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="fa fa-bold"></i></a>
+                      <a class="btn" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="fa fa-italic"></i></a>
+                      <a class="btn" data-edit="strikethrough" title="Strikethrough"><i class="fa fa-strikethrough"></i></a>
+                      <a class="btn" data-edit="underline" title="Underline (Ctrl/Cmd+U)"><i class="fa fa-underline"></i></a>
+                    </div>
+
+                    <div class="btn-group">
+                      <a class="btn" data-edit="insertunorderedlist" title="Bullet list"><i class="fa fa-list-ul"></i></a>
+                      <a class="btn" data-edit="insertorderedlist" title="Number list"><i class="fa fa-list-ol"></i></a>
+                      <a class="btn" data-edit="outdent" title="Reduce indent (Shift+Tab)"><i class="fa fa-dedent"></i></a>
+                      <a class="btn" data-edit="indent" title="Indent (Tab)"><i class="fa fa-indent"></i></a>
+                    </div>
+
+                    <div class="btn-group">
+                      <a class="btn" data-edit="justifyleft" title="Align Left (Ctrl/Cmd+L)"><i class="fa fa-align-left"></i></a>
+                      <a class="btn" data-edit="justifycenter" title="Center (Ctrl/Cmd+E)"><i class="fa fa-align-center"></i></a>
+                      <a class="btn" data-edit="justifyright" title="Align Right (Ctrl/Cmd+R)"><i class="fa fa-align-right"></i></a>
+                      <a class="btn" data-edit="justifyfull" title="Justify (Ctrl/Cmd+J)"><i class="fa fa-align-justify"></i></a>
+                    </div>
+
+                    <div class="btn-group">
+                      <a class="btn dropdown-toggle" data-toggle="dropdown" title="Hyperlink"><i class="fa fa-link"></i></a>
+                      <div class="dropdown-menu input-append">
+                        <input class="span2" placeholder="URL" type="text" data-edit="createLink" />
+                        <button class="btn" type="button">添加</button>
+                      </div>
+                      <a class="btn" data-edit="unlink" title="Remove Hyperlink"><i class="fa fa-cut"></i></a>
+                    </div>
+
+                    <div class="btn-group">
+                      <a class="btn" title="Insert picture (or just drag & drop)" id="pictureBtn"><i class="fa fa-picture-o"></i></a>
+                      <input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" />
+                    </div>
+
+                    <div class="btn-group">
+                      <a class="btn" data-edit="undo" title="Undo (Ctrl/Cmd+Z)"><i class="fa fa-undo"></i></a>
+                      <a class="btn" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i class="fa fa-repeat"></i></a>
+                    </div>
+                  </div>
+
+                  <div id="editor-one" class="editor-wrapper"></div>
+                  <textarea name="descr" id="descr" style="display:none;"></textarea>
+                  <br />
+
+                  <div class="ln_solid"></div>
+
+                  <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">自适应文本区域</label>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                      <textarea class="resizable_textarea form-control" placeholder="这个文本区域自动调整它的高度，注意是高度！你填写更多的文本由autosize-master控制..."></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="x_panel">
+              <div class="x_title">
+                <h2>表单输入框栅格<small>表单输入框</small></h2>
+                <ul class="nav navbar-right panel_toolbox">
+                  <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">设置1</a>
+                      </li>
+                      <li><a href="#">设置2</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a class="close-link"><i class="fa fa-close"></i></a>
+                  </li>
+                </ul>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+
+                <div class="row">
+
+                  <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-12" class="form-control">
+                  </div>
+
+                  <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-6" class="form-control">
+                  </div>
+
+                  <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-6" class="form-control">
+                  </div>
+
+
+                  <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-4" class="form-control">
+                  </div>
+
+                  <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-4" class="form-control">
+                  </div>
+
+                  <div class="col-md-4 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-4" class="form-control">
+                  </div>
+
+
+                  <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-3" class="form-control">
+                  </div>
+
+                  <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-3" class="form-control">
+                  </div>
+
+                  <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-3" class="form-control">
+                  </div>
+
+                  <div class="col-md-3 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-3" class="form-control">
+                  </div>
+
+
+                  <div class="col-md-2 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-2" class="form-control">
+                  </div>
+
+                  <div class="col-md-2 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-2" class="form-control">
+                  </div>
+
+                  <div class="col-md-2 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-2" class="form-control">
+                  </div>
+
+                  <div class="col-md-2 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-2" class="form-control">
+                  </div>
+
+                  <div class="col-md-2 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-2" class="form-control">
+                  </div>
+
+                  <div class="col-md-2 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-2" class="form-control">
+                  </div>
+
+
+                  <div class="col-md-1 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-1" class="form-control">
+                  </div>
+
+                  <div class="col-md-1 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-1" class="form-control">
+                  </div>
+
+                  <div class="col-md-1 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-1" class="form-control">
+                  </div>
+
+                  <div class="col-md-1 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-1" class="form-control">
+                  </div>
+
+                  <div class="col-md-1 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-1" class="form-control">
+                  </div>
+
+                  <div class="col-md-1 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-1" class="form-control">
+                  </div>
+
+                  <div class="col-md-1 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-1" class="form-control">
+                  </div>
+
+                  <div class="col-md-1 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-1" class="form-control">
+                  </div>
+
+                  <div class="col-md-1 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-1" class="form-control">
+                  </div>
+
+                  <div class="col-md-1 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-1" class="form-control">
+                  </div>
+
+                  <div class="col-md-1 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-1" class="form-control">
+                  </div>
+
+                  <div class="col-md-1 col-sm-12 col-xs-12 form-group">
+                    <input type="text" placeholder=".col-md-1" class="form-control">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+            <div class="x_panel">
+              <div class="x_title">
+                <h2>表单设计<small>副标题</small></h2>
+                <ul class="nav navbar-right panel_toolbox">
+                  <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">设置1</a>
+                      </li>
+                      <li><a href="#">设置2</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a class="close-link"><i class="fa fa-close"></i></a>
+                  </li>
+                </ul>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+                <br />
+
+                <h4>水平标签</h4>
+                <p class="font-gray-dark">
+                	使用这个栅格系统亦可以控制标签的位置。下面的这个表单例子
+                  <b>col-md-10</b>设置为10/12 和设置 <b>center-margin</b> 居中.
+                </p>
+                <form class="form-horizontal form-label-left">
+                  <div class="form-group">
+                    <label class="control-label col-md-3" for="first-name">姓<span class="required">*</span>
+                    </label>
+                    <div class="col-md-7">
+                      <input type="text" id="first-name2" required="required" class="form-control col-md-7 col-xs-12">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label col-md-3" for="last-name">名<span class="required">*</span>
+                    </label>
+                    <div class="col-md-7">
+                      <input type="text" id="last-name2" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
+                    </div>
+                  </div>
+                </form>
+
+
+                <h4>垂直标签</h4>
+                <p class="font-gray-dark">
+                	制作垂直标签你有两个选择，要么使用
+                 <b>.col-</b> 类 或者把表单包裹在<b>form-vertical</b> 类.
+                </p>
+                <div class="col-md-8 center-margin">
+                  <form class="form-horizontal form-label-left">
+                    <div class="form-group">
+                      <label>邮箱地址</label>
+                      <input type="email" class="form-control" placeholder="输入邮箱">
+                    </div>
+                    <div class="form-group">
+                      <label>密码</label>
+                      <input type="password" class="form-control" placeholder="输入密码">
+                    </div>
+
+                  </form>
+                </div>
+
+                <h4>内联表单</h4>
+                <p class="font-gray-dark">
+                  	添加 .form-inline 在你的表单(不一定是&lt;form&gt;)为左对齐和内联
+                </p>
+                <form class="form-inline">
+                  <div class="form-group">
+                    <label for="ex3">邮箱地址</label>
+                    <input type="text" id="ex3" class="form-control" placeholder=" ...">
+                  </div>
+                  <div class="form-group">
+                    <label for="ex4">邮箱地址</label>
+                    <input type="email" id="ex4" class="form-control" placeholder=" ...">
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"> 记住我
+                    </label>
+                  </div>
+                  <button type="submit" class="btn btn-default">发送邀请</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+   
+        
+         <!-- footer content -->
+         <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            Bootstrap Admin Template by <a href="https://colorlib.com">XXXXX</a>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+         <!-- /footer content -->
+
+      </div>
+    </div>
+    <!--公共js-->
+     <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+   
+    <!-- bootstrap-progressbar -->
+    <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="../vendors/iCheck/icheck.min.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="../vendors/moment/min/moment.min.js"></script>
+    <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- bootstrap-wysiwyg 富文本编辑器-->
+    <script src="../vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+    <script src="../vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+    <script src="../vendors/google-code-prettify/src/prettify.js"></script>
+    <!-- jQuery Tags Input -->
+    <script src="../vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+    <!-- Switchery -->
+    <script src="../vendors/switchery/dist/switchery.min.js"></script>
+    <!-- Select2 -->
+    <script src="../vendors/select2/dist/js/select2.full.min.js"></script>
+    <script src="../vendors/select2/dist/js/i18n/zh-CN.js"></script>
+    <!-- Parsley -->
+    <script src="../vendors/parsleyjs/dist/parsley.min.js"></script>
+    <script src="../vendors/parsleyjs/dist/i18n/zh_cn.js"></script>
+    <!-- Autosize -->
+    <script src="../vendors/autosize/dist/autosize.min.js"></script>
+    <!-- jQuery autocomplete -->
+    <script src="../vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+    <!-- starrr 星级评分-->
+    <script src="../vendors/starrr/dist/starrr.js"></script>
+    <!--公共js2-->
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.js"></script>
+	
+  </body>
+</html>

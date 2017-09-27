@@ -1,0 +1,25 @@
+为了提高访问速度xdebug的输出文件默认为关闭，如果在本地调试要输出PHP调试文件请修改\upupw\PHP5\php.ini文件
+启用Xdebug调试前请先注释掉[Zend]下所有内容解除冲突
+
+[Xdebug]
+zend_extension="X:\upupw\PHP5\ext\php_xdebug.dll"
+xdebug.collect_params=1
+xdebug.collect_return=1
+xdebug.auto_trace=0
+xdebug.trace_output_dir="X:\upupw\xdebug\trace"
+xdebug.profiler_enable=0
+xdebug.profiler_output_dir="X:\upupw\xdebug\profiler" 
+xdebug.max_nesting_level=100
+xdebug.remote_enable=1
+xdebug.remote_host=localhost
+xdebug.remote_port=9000
+xdebug.remote_handler=dbgp
+
+请设置xdebug.auto_trace=1和xdebug.profiler_enable=1即可输出文件到trace和profiler目录。
+
+注意：开启文件输出后访问网站的速度会非常慢请耐心等待。
+
+由于效能监测文件：cachegrind.out.xxx文件的内容不易被人类所理解，所以我们需要一个工具来读取它。
+
+请使用WinCacheGrind,点击Tools->options，设定你的working folder(php.ini里xdebug.profiler_output_dir的绝对路径)
+这样就可以比较直观的查看效能监测文件的信息了。

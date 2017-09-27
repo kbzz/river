@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<!-- Meta, title, CSS, favicons, etc. -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Admin</title>
+		<!--公共样式-->
+		    <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress 网页进度条 http://amazeui.org/1.x/javascript/nprogress/-->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+
+		<!--Bootstrap Table-->
+		<link rel="stylesheet" href="../vendors/bootstrap-table-develop/dist/bootstrap-table.min.css" />
+		<!--公共样式2-->
+		 <!-- Custom Theme Style -->
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+    <!--自定义扩展样式-->
+    <link href="../build/css/custom-extend.css" rel="stylesheet">
+
+	</head>
+
+	<body class="nav-md">
+		<div class="container body">
+			<div class="main_container">
+
+				<!--left_col-->
+				<div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>色月管理系统</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="images/user.png" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>欢迎,</span>
+                <h2>Admin</h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>常规</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-home"></i> 主页 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="index.html">总览</a></li>
+                      <!--<li><a href="index2.html">Dashboard2</a></li>
+                      <li><a href="index3.html">Dashboard3</a></li>-->
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-edit"></i> 表单 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="form.html">基本表单</a></li>
+                      <li><a href="form_validation.html">表单验证</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-table"></i> 表格 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                       <li><a href="tables_3.html">基本表格1</a></li>
+                      <li><a href="tables.html">基本表格2</a></li>
+                      <li><a href="tables_dynamic.html">动态表格</a></li>
+                      <li><a href="tables_dynamic_2.html">动态表格高级</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="设置">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="全屏">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="锁住">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="注销" href="login.html">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+				<!--/left_col-->
+
+				<!--top-nav-->
+				 <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="images/user.png" alt="">Admin
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="javascript:;"> 个人中心</a></li>
+                    <li>
+                      <a href="javascript:;">
+                        <span class="badge bg-red pull-right">50%</span>
+                        <span>设置</span>
+                      </a>
+                    </li>
+                    <li><a href="javascript:;">帮助</a></li>
+                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i>注销</a></li>
+                  </ul>
+                </li>
+
+                <li role="presentation" class="dropdown">
+                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="badge bg-green">6</span>
+                  </a>
+                  <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/user.png" alt="Profile Image" /></span>
+                        <span>
+                          <span>Admin</span>
+                          <span class="time">3分钟前</span>
+                        </span>
+                        <span class="message">
+                          你有新的消息通知请及时处理...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/user.png" alt="Profile Image" /></span>
+                        <span>
+                          <span>Admin</span>
+                          <span class="time">3分钟前</span>
+                        </span>
+                        <span class="message">
+                          你有新的消息通知请及时处理...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/user.png" alt="Profile Image" /></span>
+                        <span>
+                          <span>Admin</span>
+                          <span class="time">3分钟前</span>
+                        </span>
+                        <span class="message">
+                          你有新的消息通知请及时处理...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/user.png" alt="Profile Image" /></span>
+                        <span>
+                          <span>Admin</span>
+                          <span class="time">3分钟前</span>
+                        </span>
+                        <span class="message">
+                          你有新的消息通知请及时处理...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="text-center">
+                        <a>
+                          <strong>查看更多</strong>
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+				<!--/top-nav-->
+
+				<!-- page content -->
+				<div class="right_col" role="main">
+					<div class="">
+						<div class="page-title">
+							<div class="title_left">
+								<h3>Bootstrap Table 2<small>xxxxx</small></h3>
+							</div>
+
+							<div class="title_right">
+								<div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+									<div class="input-group">
+										<input type="text" class="form-control" placeholder="搜索...">
+										<span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="clearfix"></div>
+
+						<div class="row">
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="x_panel">
+									<div class="x_title">
+										<h2>本地读取数据<small>用户</small></h2>
+										<ul class="nav navbar-right panel_toolbox">
+											<li>
+												<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+											</li>
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+												<ul class="dropdown-menu" role="menu">
+													<li>
+														<a href="#">设置1</a>
+													</li>
+													<li>
+														<a href="#">设置2</a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a class="close-link"><i class="fa fa-close"></i></a>
+											</li>
+										</ul>
+										<div class="clearfix"></div>
+									</div>
+									<div class="x_content">
+										<p class="text-muted font-13 m-b-30">
+											两种方式启用Bootstrap Table插件 1.data属性 2.编写javascript 这里使用data属性
+										</p>
+
+										<table id="table" data-toggle="table" data-height="460" data-pagination="true" data-search="true" data-url="../data/data2.json">
+											<thead>
+												<tr>
+													<th data-field="id">ID</th>
+													<th data-field="name">Item Name</th>
+													<th data-field="price">Item Price</th>
+												</tr>
+											</thead>
+										</table>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="x_panel">
+									<div class="x_title">
+										<h2>Ajax展示数据<small>xxxxx</small></h2>
+										<ul class="nav navbar-right panel_toolbox">
+											<li>
+												<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+											</li>
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+												<ul class="dropdown-menu" role="menu">
+													<li>
+														<a href="#">设置1</a>
+													</li>
+													<li>
+														<a href="#">设置2</a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a class="close-link"><i class="fa fa-close"></i></a>
+											</li>
+										</ul>
+										<div class="clearfix"></div>
+									</div>
+									<div class="x_content">
+										<p class="text-muted font-13 m-b-30">
+											使用 <code>sidePagination: 'server'</code>表格属性 
+										</p>
+
+										<table id="table" data-toggle="table" data-height="400" data-side-pagination="server" data-pagination="true" data-page-list="[5, 10, 20, 50]" data-search="true">
+											<thead>
+												<tr>
+													<th data-field="state" data-checkbox="true"></th>
+													<th data-field="result.year">年份</th>
+													<th data-field="name">Item Name</th>
+													<th data-field="price">Item Price</th>
+												</tr>
+											</thead>
+										</table>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!-- /page content -->
+
+				<!-- footer content -->
+				 <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            Bootstrap Admin Template by <a href="https://colorlib.com">XXXXX</a>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+				<!-- /footer content -->
+
+			</div>
+		</div>
+		<!--公共js-->
+		 <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+
+		<!--Bootstrap Table-->
+		<script src="../vendors/bootstrap-table-develop/dist/bootstrap-table.min.js"></script>
+		<script src="../vendors/bootstrap-table-develop/dist/locale/bootstrap-table-zh-CN.min.js"></script>
+
+		<!--公共js2-->
+		<!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.js"></script>
+
+		<!--自定义js-->
+		<script type="text/javascript">
+			var key = '00be151d0b2ce1f5cafb1d70156e8031',
+				date = new Date(),
+				month = date.getMonth()+1,
+				day = date.getDate();
+			$('#table').bootstrapTable({
+//				url:'http://api.juheapi.com/japi/toh?key='+key+'&v=1.0&month='+month+'&day='+day
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,1 @@
+open_basedir="X:\UPUPW_MicroEngine\htdocs\;X:\UPUPW_MicroEngine\memcached\;X:\UPUPW_MicroEngine\phpmyadmin\;X:\UPUPW_MicroEngine\temp\;C:\Windows\Temp\"

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<!-- Meta, title, CSS, favicons, etc. -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Admin</title>
+		<!--公共样式-->
+		@@include('template/_common-css.html')
+
+		<!--Bootstrap Table-->
+		<link rel="stylesheet" href="../vendors/bootstrap-table-develop/dist/bootstrap-table.min.css" />
+		<!--公共样式2-->
+		@@include('template/_common-css2.html')
+
+	</head>
+
+	<body class="nav-md">
+		<div class="container body">
+			<div class="main_container">
+
+				<!--left_col-->
+				@@include('template/_left-col.html')
+				<!--/left_col-->
+
+				<!--top-nav-->
+				@@include('template/_top-nav.html')
+				<!--/top-nav-->
+
+				<!-- page content -->
+				<div class="right_col" role="main">
+					<div class="">
+						<div class="page-title">
+							<div class="title_left">
+								<h3>Bootstrap Table<small>让你开始使用的一些例子</small></h3>
+							</div>
+
+							<div class="title_right">
+								<div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+									<div class="input-group">
+										<input type="text" class="form-control" placeholder="搜索...">
+										<span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="clearfix"></div>
+
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<div class="x_panel">
+									<div class="x_title">
+										<h2>data属性开启<small>用户</small></h2>
+										<ul class="nav navbar-right panel_toolbox">
+											<li>
+												<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+											</li>
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+												<ul class="dropdown-menu" role="menu">
+													<li>
+														<a href="#">设置1</a>
+													</li>
+													<li>
+														<a href="#">设置2</a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a class="close-link"><i class="fa fa-close"></i></a>
+											</li>
+										</ul>
+										<div class="clearfix"></div>
+									</div>
+									<div class="x_content">
+										<p class="text-muted font-13 m-b-30">
+											两种方式启用Bootstrap Table插件 1.data属性 2.编写javascript 这里使用data属性
+										</p>
+										<!--data属性启用table-->
+										<table data-toggle="table" data-url="../data/data1.json">
+											<thead>
+												<tr>
+													<th data-field="id">Item ID</th>
+													<th data-field="name">Item Name</th>
+													<th data-field="price">Item Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td>Item 1</td>
+													<td>$1</td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td>Item 2</td>
+													<td>$2</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<div class="x_panel">
+									<div class="x_title">
+										<h2>javascript开启</small></h2>
+										<ul class="nav navbar-right panel_toolbox">
+											<li>
+												<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+											</li>
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+												<ul class="dropdown-menu" role="menu">
+													<li>
+														<a href="#">设置1</a>
+													</li>
+													<li>
+														<a href="#">设置2</a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a class="close-link"><i class="fa fa-close"></i></a>
+											</li>
+										</ul>
+										<div class="clearfix"></div>
+									</div>
+									<div class="x_content">
+										<p class="text-muted font-13 m-b-30">
+											编写javascript
+										</p>
+										<!--通过js开启-->
+										<table id="table"></table>
+									</div>
+								</div>
+							</div>
+
+							<!--排序-->
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<div class="x_panel">
+									<div class="x_title">
+										<h2>排序<small>XXXXX</small></h2>
+										<ul class="nav navbar-right panel_toolbox">
+											<li>
+												<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+											</li>
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+												<ul class="dropdown-menu" role="menu">
+													<li>
+														<a href="#">设置1</a>
+													</li>
+													<li>
+														<a href="#">设置2</a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a class="close-link"><i class="fa fa-close"></i></a>
+											</li>
+										</ul>
+										<div class="clearfix"></div>
+									</div>
+									<div class="x_content">
+										<p class="text-muted font-13 m-b-30">
+											使用 <code>sortName</code>, <code>sortOrder</code>, <code>sortable</code> options, and <code>sortable</code>, <code>order</code>列选项设置排序的表格
+										</p>
+										<table id="table" data-toggle="table" data-url="../data/data1.json" data-sort-name="name" data-sort-order="desc">
+											<thead>
+												<tr>
+													<th data-field="id" data-sortable="true">Item ID</th>
+													<th data-field="name" data-sortable="true">Item Name</th>
+													<th data-field="price" data-sortable="true">Item Price</th>
+												</tr>
+											</thead>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<div class="x_panel">
+									<div class="x_title">
+										<h2>自定义排序<small>xxxxx</small></h2>
+										<ul class="nav navbar-right panel_toolbox">
+											<li>
+												<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+											</li>
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+												<ul class="dropdown-menu" role="menu">
+													<li>
+														<a href="#">设置1</a>
+													</li>
+													<li>
+														<a href="#">设置2</a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a class="close-link"><i class="fa fa-close"></i></a>
+											</li>
+										</ul>
+										<div class="clearfix"></div>
+									</div>
+									<div class="x_content">
+										<p class="text-muted font-13 m-b-30">
+											使用<code>sorter</code>列选项定义自定义表格,对<code>Item Price</code>进行自定义排序
+										</p>
+										<table id="table2" data-toggle="table" data-height="460" data-url="../data/data2.json" data-sort-name="price" data-sort-order="desc">
+											<thead>
+												<tr>
+													<th data-field="id" data-sortable="true">Item ID</th>
+													<th data-field="name" data-sortable="true">Item Name</th>
+													<th data-field="price" data-sortable="true" data-sorter="priceSorter">Item Price</th>
+												</tr>
+											</thead>
+										</table>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<div class="x_panel">
+									<div class="x_title">
+										<h2>数据格式化<small>xxxx</small></h2>
+										<ul class="nav navbar-right panel_toolbox">
+											<li>
+												<a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+											</li>
+											<li class="dropdown">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+												<ul class="dropdown-menu" role="menu">
+													<li>
+														<a href="#">设置1</a>
+													</li>
+													<li>
+														<a href="#">设置2</a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a class="close-link"><i class="fa fa-close"></i></a>
+											</li>
+										</ul>
+										<div class="clearfix"></div>
+									</div>
+									<div class="x_content">
+										<div class="row">
+											<div class="col-sm-12">
+												<div class="card-box">
+													<p class="text-muted font-13 m-b-30">
+														使用 <code>formatter</code> 列选项格式化表格数据
+													</p>
+													<table id="table" data-toggle="table"  data-url="../data/data2.json" data-height="460">
+														<thead>
+															<tr>
+																<th data-field="id" data-formatter="ID: %s">ID</th>
+																<th data-field="name" data-formatter="nameFormatter">Item Name</th>
+																<th data-field="price" data-formatter="priceFormatter">Item Price</th>
+															</tr>
+														</thead>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /page content -->
+
+				<!-- footer content -->
+				@@include('template/_footer.html')
+				<!-- /footer content -->
+
+			</div>
+		</div>
+		<!--公共js-->
+		@@include('template/_common-js.html')
+
+		<!--Bootstrap Table-->
+		<script src="../vendors/bootstrap-table-develop/dist/bootstrap-table.min.js"></script>
+		<script src="../vendors/bootstrap-table-develop/dist/locale/bootstrap-table-zh-CN.min.js"></script>
+
+		<!--公共js2-->
+		@@include('template/_common-js2.html')
+
+		<!--自定义js-->
+		<script type="text/javascript">
+			$('#table').bootstrapTable({
+				url: '../data/data1.json',
+				columns: [{
+					field: 'id',
+					title: 'Item ID'
+				}, {
+					field: 'name',
+					title: 'Item Name'
+				}, {
+					field: 'price',
+					title: 'Item Price'
+				}],
+				data: [{
+					id: 1,
+					name: 'Item 1',
+					price: '$1'
+				}, {
+					id: 2,
+					name: 'Item 2',
+					price: '$2'
+				}]
+			});
+
+			/*自定义排序*/
+			/*
+			a: the first field value.
+			b: the second field value.
+			*/
+			function priceSorter(a, b) {
+				a = +a.substring(1); // remove $
+				b = +b.substring(1);
+				console.log('a:' + a + '-------b:' + b);
+				if(a > b) return 1;
+				if(a < b) return -1;
+				return 0;
+			}
+			/*数据格式化-1 */
+			function nameFormatter(value, row) {
+				var icon = row.id % 2 === 0 ? 'glyphicon-star' : 'glyphicon-star-empty'
+
+				return '<i class="glyphicon ' + icon + '"></i> ' + value;
+			}
+			/*数据格式化-2 */
+			function priceFormatter(value) {
+				// 16777215 == ffffff in decimal
+				var color = '#' + Math.floor(Math.random() * 6777215).toString(16);
+				return '<div  style="color: ' + color + '">' +
+					'<i class="glyphicon glyphicon-usd"></i>' +
+					value.substring(1) +
+					'</div>';
+			}
+		</script>
+	</body>
+
+</html>

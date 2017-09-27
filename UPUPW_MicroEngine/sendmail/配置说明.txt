@@ -1,0 +1,4 @@
+1、打开sendmail.ini文件对应UPUPW添加的中文说明进行配置
+2、打开UPUPW制作的sendmail测试程序sendmail.php修改test@test.com为你的接收邮箱,webmaster@upupw.net为你在sendmail.ini中用作服务的邮箱
+3、复制sendmail.php到你的主目录或虚拟主机目录
+4、域名/sendmail.php访问，显示success!为发送成功可去接收邮件，显示fail...为发送失败请检查sendmail.ini

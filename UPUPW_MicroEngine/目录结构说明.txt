@@ -1,0 +1,29 @@
+﻿UPUPW定制版MicroEngine微信公众平台 目录说明：
+
+01、upupw.exe       UPUPW控制面板主程序
+02、Nginx           Nginx web服务器软件目录
+03、Backup          UPUPW配置和数据库备份及出厂配置目录
+04、ErrorFiles      UPUPW自定义HTTP状态码400,401,403,404,500,502,504自定义页目录
+05、FileZillaftp    FileZilla server ftp程序目录
+06、htdocs          微擎系统网站目录，UPUPW迁移时无需修改配置路径，面板s1开启即可运行
+07、memcached       memcache服务端主程序目录
+08、MySQL/MariaDB   MySQL/MariaDB数据库程序目录
+09、PHP5            PHP5.4目录
+10、phpmyadmin      phpmyadmin数据库管理软件目录，已配置/pmd别名访问
+11、sendmail        sendmail邮件服务程序目录
+12、temp            temp目录为session文件存储、临时上传文件、数据缓存目录
+13、upcore          upcore为UPUPW程序的附属目录
+14、vhosts          vhosts为虚拟主机默认存储目录，建立在此目录的网站文件夹在UPUPW迁移时无需再修改虚拟主机路径，UPUPW面板s1开启即可运行
+15、xdebug          xdebug文件夹为xdebug调试程序输出文件目录
+
+upupw\Nginx\logs                 环境及网站日志文件目录
+upupw\MySQL或MariaDB\data        MySQL或MariaDB数据库存储目录
+upupw\Nginx\conf\vhosts.conf     虚拟主机配置文件
+upupw\PHP5\php.ini               PHP配置文件
+upupw\MySQL或MariaDB\my.ini      MySQL或MariaDB配置文件
+upupw\sendmail\sendmail.ini      SendMail配置文件
+memcached://127.0.0.1:11211      MemCached服务端地址及端口
+网站目录/.uini                   UPUPW设置的虚拟主机目录隔离文件，防跨站需要此文件的支持，默认已禁止外部访问此文件。
+网站目录/up-rewrite.conf         UPUPW设置的Nginx伪静态支持文件，在此可定义网站的伪静态规则等，默认已禁止外部访问此文件。
+网站目录/u.php                   UPUPW PHP探针NGINX专用版，正式运营时请删除此文件。
+网站目录/ErrorFiles              常见服务器HTTP状态码400,401,403,404,500,502,504自定义页面

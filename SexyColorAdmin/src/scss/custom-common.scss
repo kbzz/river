@@ -1,0 +1,124 @@
+@charset 'utf-8';
+body {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+.table>thead>tr>th {
+    border-bottom: 1px solid #ddd;
+}
+
+.table-responsive {
+    overflow-x: initial;
+    .form-horizontal {
+        .form-group {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.x_panel {
+    padding-top: 0;
+}
+
+.x_title {
+    margin-left: -17px;
+    margin-right: -17px;
+    padding-left: 17px;
+    border-width: 1px;
+}
+
+.breadcrumb {
+    background-color: #fff;
+    margin-bottom: 0;
+}
+
+.table_form {
+    .jambo_table {
+        font-size: 1.1em;
+        margin-bottom: 0;
+        td {
+            vertical-align: middle;
+            label {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .pagination {
+        float: right;
+    }
+    .info_box {
+        float: left;
+        margin: 20px 0;
+        font-size: 14px;
+    }
+}
+
+.breadcrumb {
+    >.active {
+        color: #1ABB9C;
+    }
+}
+
+.input-group-addon {
+    background-color: #fff;
+}
+
+.form_fixed {
+    width: 1042px;
+    display: table;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    .form-group {
+        display: inline-block;
+        vertical-align: middle;
+        label {
+            width: 96px;
+            display: inline-block;
+            padding-top: 0!important;
+            vertical-align: middle;
+        }
+        .input_box {
+            display: inline-block;
+            padding-left: 10px;
+            padding-right: 10px;
+            vertical-align: middle;
+        }
+        input,
+        select {
+            width: 170px;
+        }
+        ._submit {
+            margin-bottom: -2px;
+        }
+        .range_box {
+            >* {
+                vertical-align: middle;
+            }
+            .input-group {
+                margin-bottom: 0;
+                .input-group-addon{
+                    border-radius: 0;
+                }
+            }
+            .input_box_2 {
+                display: inline-block;
+            }
+            ._separator {
+                display: inline-block;
+            }
+            input {
+                width: 120px;
+            }
+        }
+        .short_box {
+            ._separator {
+                display: inline-block;
+            }
+            input {
+                display: inline-block;
+                width: 73px;
+            }
+        }
+    }
+}

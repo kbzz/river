@@ -1,0 +1,8 @@
+﻿运行库说明：
+ 
+1、Visual C++2008 SP1(已集成)     PHP5.4.X采用VC9编译版本，需要此库的支持才能运行。 
+
+2、.NET2.0或3.5运行库(必装)       UPUPW进程守护等附带增强工具需.NET2.0或3.5运行库的支持才能运行。
+
+   .NET2.0下载：http://www.microsoft.com/zh-cn/download/details.aspx?id=1639   (文件小，仅XP/2003系统选择) 
+   .NET3.5下载：http://www.microsoft.com/zh-cn/download/details.aspx?id=25150 （文件大，WIN系统都可以选择）
