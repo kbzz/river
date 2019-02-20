@@ -1,4 +1,7 @@
 <?php 
+
+echo 1231;
+exit;
 require_once('./list.php');
 require_once('./db.php');
 $page=isset($_GET['page'])?$_GET['page']:1;
